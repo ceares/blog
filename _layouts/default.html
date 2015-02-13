@@ -1,12 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
-　　<head>
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-　　　　<title>{{ page.title }}</title>
-　　</head>
-　　<body>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="wrap">
+            <ul class="links">
+                <li><a href="#">博客首页</a></li>
+                <li><a href="#">网站导航</a></li>
+                <li><a href="#">GitHub.com</a></li>
+            </ul>
+            <a href="/"><img src="./img/logo.png" width="136" height="25" alt="SevenNight logo"></a>
+        </div>
+    </header>
 
-　　　　{{ content }}
+    <!-- 公告块 -->
+    <div class="article">
 
-　　</body>
+    </div>
+    <!-- 正文内容 -->
+    <div  class="wrap">
+        {{ content }}
+    </div>
+</body>
 </html>
