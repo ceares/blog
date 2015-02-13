@@ -1,4 +1,4 @@
-
+﻿
 /*通用样式*/
 body{
     font: 14px/1.5 'Microsoft YaHei',arial,tahoma,\5b8b\4f53,sans-serif;
@@ -29,6 +29,12 @@ header {
 }
 header img{
     opacity: .3;
+}
+header .logo{
+    width: 136px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }
 header ul.links>li a {
     color: #999;
