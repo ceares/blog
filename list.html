@@ -6,7 +6,7 @@ title: All Posts
   <h1>文章档案</h1>
   <ul class="posts">
     {% for post in site.posts %}
-    <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-right post-list">{{ post.date | date_to_string | date: "%m %-d, %Y"  }}</h4></time></span></span></li>
+    <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-right post-list">{{ post.date | date_to_string | date: "%Y 年 %m 月 %-d 日 "  }}</h4></time></span></span></li>
     {% endfor %}
   </ul>
 </div>
