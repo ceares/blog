@@ -34,9 +34,9 @@
             {% endfor %}
             <li id="postlist"></li>
             <script type="text/javascript">
-                var list = "";
+                var list;
                 '{% for tag in site.tags %}'
-                    list += '<a class="tags" href="/show_tag.html?tag={{ tag.[0] }}">{{tag[0]}} &nbsp;({{ tag | last | size }})</a>';
+                    list += '<a class="tags" href="/show_tag.html?tag='+encodeURIComponent("{{ tag.[0] }}")+'">{{tag[0]}} &nbsp;({{ tag | last | size }})</a>';
                 '{% endfor %}'
                 $("#postlist").append(list);
             </script>
