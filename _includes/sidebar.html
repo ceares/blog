@@ -33,13 +33,9 @@
                 <a class="tags" href="/show_tag.html?tag={{ tag[0] }}">{{tag[0]}}&nbsp;({{ tag | last | size }})</a>
             {% endfor %}
             <script type="text/template">
-                var list = "";
                 {% for tag in site.tags %}
-                    list+={tag[0]};
+                    <a class="tags" href="/show_tag.html?tag={{ tag[0] }}">{{tag[0]}}&nbsp;({{ tag | last | size }})</a>
                 {% endfor %}
-            </script>
-            <script type="text/javascript">
-                console.log(list);
             </script>
         </ul>
     </div>
