@@ -30,7 +30,7 @@
     <div>
         <ul>
             {% for tag in site.tags %}
-                <a class="tags" href="/show_tag.html?tag={{ tag.[0] }}">{{ tag } {{tag[0]}} &nbsp;({{ tag | last | size }})</a>
+                <a class="tags" href="/show_tag.html?tag={{ tag.[0] }}">{{tag[0]}} &nbsp;({{ tag | last | size }})</a>
             {% endfor %}
         </ul>
     </div>
