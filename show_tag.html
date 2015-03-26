@@ -13,7 +13,7 @@ layout: default
         data = JSON.parse(dataStr),
         curTag = $.query.get("tag"),
         archieves = data[curTag];
-        console.log(archieves);
+        console.log(dataStr);
         var postlist = "";
         for(var i=0;i<archieves.length;i++){
             postlist+='<li><a href="{{ site.baseurl }}'+archieves[i].url+'">'+archieves[i].title+'</a><span>'+archieves[i].date+'</span></li>';
