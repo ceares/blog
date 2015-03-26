@@ -9,11 +9,10 @@ layout: default
 <script src="{{ site.baseurl }}/js/Jquery.Query.js"></script>
 <script type="text/javascript">
     $(function(){
-        var dataStr = '{ {% for tag in site.tags %}{% if tag[0] != site.tags.first[0] %},{% endif %}"'+encodeURIComponent("{{ tag[0] }}")+'":[{% for post in tag[1] %}{% if post != tag[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%Y-%m-%d"}}"}{% endfor %}]{% endfor %} }',
+        var dataStr = '{ {% for tag in site.tags %}{% if tag[0] != site.tags.first[0] %},{% endif %}""{{ tag[0] }}":[{% for post in tag[1] %}{% if post != tag[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%Y-%m-%d"}}"}{% endfor %}]{% endfor %} }',
         data = JSON.parse(dataStr),
         curTag = $.query.get("tag"),
         archieves = data[curTag];
-        console.log(dataStr);
         var postlist = "";
         for(var i=0;i<archieves.length;i++){
             postlist+='<li><a href="{{ site.baseurl }}'+archieves[i].url+'">'+archieves[i].title+'</a><span>'+archieves[i].date+'</span></li>';
