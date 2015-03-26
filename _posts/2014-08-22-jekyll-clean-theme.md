@@ -3,6 +3,7 @@ layout: post
 title: "jekyll主题"
 date: 2014-08-22 16:25:06 -0700
 comments: false
+tags: [test]
 ---
 
 Welcome to the sample post for the Jekyll Clean theme.

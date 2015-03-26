@@ -24,6 +24,7 @@ gaaccount: ''
 comments: true
 
 permalink: /:year/:month/:title
+permalink: /:year/:month/:day/:title
 paginate: 3
 
 highlighter: pygments

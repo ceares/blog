@@ -3,6 +3,7 @@ layout: post
 title: "jekyll安装"
 date: 2015-03-05 12:27:01 -0700
 comments: true
+tags: [test, sample,基础]
 ---
 
 #jekyll 运行环境教程

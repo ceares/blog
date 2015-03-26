@@ -1,9 +1,11 @@
+<!-- 说明 -->
 <div class="sidebar_column">
     <div>
         {{ site.description }}
     </div>
 </div>
 
+<!--最新文章-->
 <div class="sidebar_column">
     <div>
         <h3>最新文章</h3>
@@ -15,8 +17,21 @@
     </div>
 </div>
 
+<!-- 链接 -->
 <div class="sidebar_column">
     <div>
         {% include links-list.html %}
+    </div>
+</div>
+
+<!-- 分类 -->
+<div class="sidebar_column">
+    <h3>分类</h3>
+    <div>
+        <ul>
+            {% for tag in site.tags %}
+                <a class="tags" href="/show_tag.html?tag={{ tag[0] }}">{{tag[0]}}&nbsp;({{ tag | last | size }})</a>
+            {% endfor %}
+        </ul>
     </div>
 </div>
