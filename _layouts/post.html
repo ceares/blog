@@ -1,53 +1,41 @@
 {% include header.html %}
 
-<div class="container container-left">
-    <div class="row">
-        <div class="col-md-3 hidden-xs">
-            {% include sidebar.html %}
-        </div>
-        <div class="col-md-9">
-          <div class="article">
+<div id="main">
+    <div id="mainContent">
+        <div class="article">
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }} - {{ page.title }}</a></h1>
-            {% if site.comments == true and page.comments == true and site.disqus != '' %}
-                <p class="author"><a href="#disqus_thread">Comments</a></p>
-            {% endif %}
-            <div class="post-content">
-            {{ content }}
+                {% if site.comments == true and page.comments == true and site.disqus != '' %}
+                <p class="author"><a href="#disqus_thread">文章评论</a></p>
+                {% endif %}
+                <div class="post-content">
+                    {{ content }}
+                </div>
+                {% if page.comments %}
+                <div id="disqus_thread">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="id1" data-title="title" data-url="http://www.xxx.com"></div>
+                    <!-- 多说评论框 end -->
+                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        var duoshuoQuery = {short_name:"sevennight"};
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0]
+                                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+                    <!-- 多说公共JS代码 end -->
+                </div>
+                {% endif %}
             </div>
-            {% if page.comments %}
-            <div id="disqus_thread">
-                <!-- 多说评论框 start -->
-					<div class="ds-thread" data-thread-key="id1" data-title="title" data-url="http://www.xxx.com"></div>
-				<!-- 多说评论框 end -->
-				<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-				<script type="text/javascript">
-				var duoshuoQuery = {short_name:"sevennight"};
-					(function() {
-						var ds = document.createElement('script');
-						ds.type = 'text/javascript';ds.async = true;
-						ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-						ds.charset = 'UTF-8';
-						(document.getElementsByTagName('head')[0] 
-						 || document.getElementsByTagName('body')[0]).appendChild(ds);
-					})();
-					</script>
-				<!-- 多说公共JS代码 end -->
-            </div>
-            {% endif %}
-            </div>
-			</div>
-			<div class="pagination">
-              {% if page.next %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">上一篇文章</a>
-              {% endif %}
-              {% if page.previous %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">下一篇文章</a>
-              {% endif %}
-			</div>
-
         </div>
     </div>
+    <div id="sideBar">
+        {% include sidebar.html %}
+    </div>
 </div>
-
 {% include footer.html %}

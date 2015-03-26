@@ -7,103 +7,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/style.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
-
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">sevennight</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">首页</a></li>
-                    <li class="active visible-xs-block"><a href="/links.html">链接</a></li>
-                    <li class="active"><a href="/archive.html">文章</a></li>
-                    <li class="active"><a href="/about.html">作者简介</a></li>
-                    <li class="active"><a href="/feed.xml">RSS</a></li>
-                    
-                     <li class="active"><a href="https://github.com/scotte/jekyll-clean">Github</a></li>
-                    
-                </ul>
-              </div>
+<div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <h1><a class="headermaintitle" href="">sevennight</a></h1>
+            <h2></h2>
+        </div>
+        <div id="navigator">
+            <ul id="navList">
+                <li><a  class="menu" href="/">首页</a></li>
+                <li><a class="menu" href="/links.html">链接</a></li>
+                <li><a class="menu" href="/archive.html">文章</a></li>
+                <li><a class="menu"  href="/about.html">作者简介</a></li>
+                <li><a class="menu" href="/feed.xml">RSS</a>
+                
+                    <li><a  class="menu" href="https://github.com/scotte/jekyll-clean">Github</a></li>
+                
+            </ul>
         </div>
     </div>
-</div>
 
 
-<div class="container container-left">
-    <div class="row">
-        <div class="col-md-3 hidden-xs">
-            <div class="sidebar well">
-橙色主题
-</div>
-
-<div class="sidebar well">
-    <h1>最新文章</h1>
-    <ul>
-        
-          <li><a href="/2014/08/jekyll-clean-theme">jekyll主题</a></li>
-        
-          <li><a href="/2014/07/Lorem-ipsum-dolor-sit-amet">颜色分类</a></li>
-        
-          <li><a href="/2014/06/Maecenas-feugiat-fringilla-nibh">信息总览</a></li>
-        
-          <li><a href="/2013/06/Cum-sociis-natoque-penatibus">第四篇文章</a></li>
-        
-          <li><a href="/2013/05/Nulla-vel-risus-dapibus">评论博客文章</a></li>
-        
-    </ul>
-</div>
-
-<div class="sidebar well">
-<h1>链接</h1>
-<ul>
-  <li><a href="#">阿里云</a></li>
-  <li><a href="#">腾讯</a></li>
-  <li><a href="#">百度</a></li>
-  <li><a href="#">360</a></li>
-</ul>
-
-</div>
-
-        </div>
-        <div class="col-md-9">
-            <!-- This page provides the sidebar links for mobile, where the sidebar is hidden -->
+<div id="main">
+    <div id="mainContent">
+        <!-- This page provides the sidebar links for mobile, where the sidebar is hidden -->
 
 <div class="well">
-  <h1>链接</h1>
+  <h3>链接</h3>
 <ul>
-  <li><a href="#">阿里云</a></li>
-  <li><a href="#">腾讯</a></li>
-  <li><a href="#">百度</a></li>
-  <li><a href="#">360</a></li>
+  <li><a href="http://www.cnblogs.com/cnsevennight">个人博客(博客园)</a></li>
+  <li><a href="http://navs.sinaapp.com/">快捷导航</a></li>
 </ul>
 
 </div>
 
-        </div>
+    </div>
+    <div id="sideBar">
+        <div class="sidebar_column">
+    <div>
+        github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
-            <p class="copyright">Copyright &nbsp;&nbsp;&copy; 2015 &nbsp;&nbsp;<a href="">sevennight</a></p>
-        </div>
+<div class="sidebar_column">
+    <div>
+        <h3>最新文章</h3>
+        <ul>
+            
+              <li><a href="/2015/03/jekyll-steup">jekyll安装</a></li>
+            
+              <li><a href="/2014/08/jekyll-clean-theme">jekyll主题</a></li>
+            
+              <li><a href="/2014/07/Lorem-ipsum-dolor-sit-amet">颜色分类</a></li>
+            
+              <li><a href="/2014/06/Maecenas-feugiat-fringilla-nibh">信息总览</a></li>
+            
+              <li><a href="/2013/06/Cum-sociis-natoque-penatibus">第四篇文章</a></li>
+            
+        </ul>
     </div>
 </div>
 
+<div class="sidebar_column">
+    <div>
+        <h3>链接</h3>
+<ul>
+  <li><a href="http://www.cnblogs.com/cnsevennight">个人博客(博客园)</a></li>
+  <li><a href="http://navs.sinaapp.com/">快捷导航</a></li>
+</ul>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+    <div class="clear"></div>
+    <div id="footer">
+        <span>Copyright ©2015 SevenNight</span>
+    </div>
+</div>
 </body>
 </html>
 

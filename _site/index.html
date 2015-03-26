@@ -7,82 +7,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/css/style.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
+<div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <h1><a class="headermaintitle" href="">sevennight</a></h1>
+            <h2></h2>
+        </div>
+        <div id="navigator">
+            <ul id="navList">
+                <li><a  class="menu" href="/">首页</a></li>
+                <li><a class="menu" href="/links.html">链接</a></li>
+                <li><a class="menu" href="/archive.html">文章</a></li>
+                <li><a class="menu"  href="/about.html">作者简介</a></li>
+                <li><a class="menu" href="/feed.xml">RSS</a>
+                
+                    <li><a  class="menu" href="https://github.com/scotte/jekyll-clean">Github</a></li>
+                
+            </ul>
+        </div>
+    </div>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">sevennight</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">首页</a></li>
-                    <li class="active visible-xs-block"><a href="/links.html">链接</a></li>
-                    <li class="active"><a href="/archive.html">文章</a></li>
-                    <li class="active"><a href="/about.html">作者简介</a></li>
-                    <li class="active"><a href="/feed.xml">RSS</a></li>
-                    
-                     <li class="active"><a href="https://github.com/scotte/jekyll-clean">Github</a></li>
-                    
-                </ul>
-              </div>
+
+<div id="main">
+    <div id="mainContent">
+        
+<div class="postList">
+    <div class="article">
+        <h1 class="postTitle"><a href="/2015/03/jekyll-steup">Mar 6, 2015 - jekyll安装</a></h1>
+        
+          <p class="author"><a href="/2015/03/jekyll-steup/#disqus_thread">文章评论</a></p>
+        
+        <div class="content">
+            <h1 id="jekyll-运行环境教程">jekyll 运行环境教程</h1>
+
+<h2 id="简介">简介</h2>
+
+<p>飞</p>
+
+<h2 id="第一步：安装-ruby">第一步：安装 Ruby</h2>
+
+<p>因为jekyll是基于Ruby写的，所以要先安装Ruby环境</p>
+
+<p>1、在官网 <a href="http://rubyinstaller.org/downloads/" target="_blank"><a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a></a> 下载Ruby</p>
+
+<p>2、安装下载的安装包</p>
+
+<blockquote>
+<p>注意：两者的安装目录，不得出现空格，比如Program Files这种目录是不能有的，建议是装在盘的根目录</p>
+
+<p>勾选&quot;Add Ruby executables to your PATH&quot;，自动添加到path，不然就得你自己手动去添加</p>
+
+<p>如果你手动添加配置安装环境的话。先环境变量中新增环境变量名 RUBY_HOME ，变量值为 你的Ruby安装目录（我的是D:\Ruby21-x64）,然后在path中加入 &quot;%RUBY_HOME%\bin&quot;）；</p>
+</blockquote>
+
+<p><img src="http://7u2sny.com1.z0.glb.clouddn.com/jekyll_steup_1.png" alt=""></p>
+
+<p>3、安装完成之后，打开一个命令提示行并输入以下命令来检测 Ruby 是否成功安装，输出示例</p>
+
+<p><img src="http://7u2sny.com1.z0.glb.clouddn.com/jekyll_steup_2.png" alt=""></p>
+
+<h2 id="第二步：安装devkit">第二步：安装DevKit</h2>
+
+<p>DevKit 是一个在 Windows 上帮助简化安装及使用 Ruby C/C++ 扩展如 RDiscount 和 RedCloth 的工具箱。 详细的安装指南可以在程序的<a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit#installation-instructions">wiki 页面 </a> 阅读</p>
+
+<p>1、在官网  <a href="http://rubyinstaller.org/downloads/" target="_blank"><a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a></a> 下载同系统及 Ruby 版本相对应的 DevKit 安装包
+对应Devkit版本选择列举</p>
+
+<blockquote>
+<p>Ruby 1.8.6 to 1.9.3: DevKit tdm-32-4.5.2</p>
+
+<p>Ruby 2.0.0: DevKit mingw64-32-4.7.2</p>
+
+<p>Ruby 2.0.0 x64: DevKit mingw64-64-4.7.2</p>
+</blockquote>
+
+<p>2、运行安装包至某文件夹，这里为了方便操作，解压到Ruby同级目录：如：D:\Devkit</p>
+
+<p>3、初始化创建config.yml文件，打开命令行(dos)，输入以下命令</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd “D:\DevKit”
+
+ruby dk.rb init
+
+notepad config.yml
+</code></pre></div>
+<p>注：config.yml文件在D:\Devkit根目录下</p>
+
+<p>4、在打开的记事本里面，末尾新加一行&quot; - D:\Ruby21-x64 &quot; ，保存，退出</p>
+
+<p><img src="http://7u2sny.com1.z0.glb.clouddn.com/jekyll_steup_3.png" alt=""></p>
+
+<p>5、在命令行窗口，审查(非必须)，并安装</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">ruby dk.rb review
+
+ruby dk.rb install
+</code></pre></div>
         </div>
     </div>
 </div>
 
-
-<div class="container container-left">
-    <div class="row">
-        <div class="col-md-3 hidden-xs">
-            <div class="sidebar well">
-橙色主题
-</div>
-
-<div class="sidebar well">
-    <h1>最新文章</h1>
-    <ul>
-        
-          <li><a href="/2014/08/jekyll-clean-theme">jekyll主题</a></li>
-        
-          <li><a href="/2014/07/Lorem-ipsum-dolor-sit-amet">颜色分类</a></li>
-        
-          <li><a href="/2014/06/Maecenas-feugiat-fringilla-nibh">信息总览</a></li>
-        
-          <li><a href="/2013/06/Cum-sociis-natoque-penatibus">第四篇文章</a></li>
-        
-          <li><a href="/2013/05/Nulla-vel-risus-dapibus">评论博客文章</a></li>
-        
-    </ul>
-</div>
-
-<div class="sidebar well">
-<h1>链接</h1>
-<ul>
-  <li><a href="#">阿里云</a></li>
-  <li><a href="#">腾讯</a></li>
-  <li><a href="#">百度</a></li>
-  <li><a href="#">360</a></li>
-</ul>
-
-</div>
-
-        </div>
-        <div class="col-md-9">
-            
-<div class="article">
-    <div class="well">
-        <h1><a href="/2014/08/jekyll-clean-theme">Aug 23, 2014 - jekyll主题</a></h1>
+<div class="postList">
+    <div class="article">
+        <h1 class="postTitle"><a href="/2014/08/jekyll-clean-theme">Aug 23, 2014 - jekyll主题</a></h1>
         
         <div class="content">
             <p>Welcome to the sample post for the Jekyll Clean theme.</p>
@@ -163,11 +194,11 @@ respective owners:</p>
     </div>
 </div>
 
-<div class="article">
-    <div class="well">
-        <h1><a href="/2014/07/Lorem-ipsum-dolor-sit-amet">Jul 23, 2014 - 颜色分类</a></h1>
+<div class="postList">
+    <div class="article">
+        <h1 class="postTitle"><a href="/2014/07/Lorem-ipsum-dolor-sit-amet">Jul 23, 2014 - 颜色分类</a></h1>
         
-          <p class="author"><a href="/2014/07/Lorem-ipsum-dolor-sit-amet/#disqus_thread">Comments</a></p>
+          <p class="author"><a href="/2014/07/Lorem-ipsum-dolor-sit-amet/#disqus_thread">文章评论</a></p>
         
         <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam metus, commodo sit amet ante a, finibus efficitur lorem. Maecenas egestas purus in tempor volutpat. Sed dapibus tortor nec sem suscipit ullamcorper. Nulla nec lorem lacus. Phasellus condimentum massa quis dolor consequat viverra ut ac magna. Ut a consequat nisi. Vivamus at leo ut turpis convallis lacinia. Curabitur eu placerat quam. Donec ultricies faucibus dui, a tincidunt lorem lobortis condimentum.</p>
@@ -180,44 +211,61 @@ respective owners:</p>
     </div>
 </div>
 
-<div class="article">
-    <div class="well">
-        <h1><a href="/2014/06/Maecenas-feugiat-fringilla-nibh">Jun 23, 2014 - 信息总览</a></h1>
-        
-          <p class="author"><a href="/2014/06/Maecenas-feugiat-fringilla-nibh/#disqus_thread">Comments</a></p>
-        
-        <div class="content">
-            <p>Maecenas feugiat fringilla nibh ut mattis. Sed non metus sit amet mi luctus feugiat in quis sem. Vivamus pulvinar commodo bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sapien nulla, eleifend in dolor et, rutrum maximus velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus malesuada egestas. Phasellus pulvinar vulputate urna in tempor. In vel sapien ullamcorper, condimentum ipsum ut, porttitor turpis. Nam auctor erat sed lectus tempus euismod. Nunc ipsum quam, condimentum ac bibendum sit amet, sodales nec metus.</p>
-
-<p>Vivamus a ullamcorper ipsum. Donec dictum eleifend massa, rhoncus consequat sem tempor nec. Ut bibendum luctus gravida. Nullam eleifend laoreet quam, nec tincidunt dolor tincidunt non. Aenean vel magna massa. Pellentesque sit amet tincidunt ante. Nulla posuere varius elit eu consequat. Sed vitae tortor scelerisque lacus eleifend condimentum. Nulla vitae neque sed lorem sagittis pretium eu nec est. Aliquam in euismod risus, vel vulputate orci.</p>
-
-<p>Praesent sit amet auctor justo. Suspendisse pretium rutrum vehicula. Cras ut porta urna. Morbi massa odio, eleifend vitae dictum eget, mattis nec metus. Praesent pellentesque metus eu massa pharetra facilisis. Suspendisse potenti. Vestibulum pellentesque pharetra tristique. Nam ut lobortis felis. Proin sit amet consequat ipsum. Curabitur et mattis justo, sit amet feugiat lectus. Sed eleifend eget arcu non pretium. Suspendisse rhoncus erat quis leo laoreet rhoncus. Aliquam quis metus vitae enim cursus sodales. In euismod tortor id odio fermentum, non pretium ipsum iaculis. Quisque consectetur elementum nisi, et posuere odio vulputate ac. Ut consequat, velit eget fermentum ultrices, ligula odio fringilla diam, sit amet accumsan elit velit tempus dolor.</p>
-
-        </div>
-    </div>
-</div>
-
 
 <div class="pagination">
   
-  <span class="page_number ">Page: 1 of 2</span>
+  <span>Page: 1 / 3</span>
   
-    <a class="btn btn-default" href="/page2" class="next">下一页</a>
+  <a href="/page2" class="next">下一页</a>
   
 </div>
 
-        </div>
+    </div>
+    <div id="sideBar">
+        <div class="sidebar_column">
+    <div>
+        github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
-            <p class="copyright">Copyright &nbsp;&nbsp;&copy; 2015 &nbsp;&nbsp;<a href="">sevennight</a></p>
-        </div>
+<div class="sidebar_column">
+    <div>
+        <h3>最新文章</h3>
+        <ul>
+            
+              <li><a href="/2015/03/jekyll-steup">jekyll安装</a></li>
+            
+              <li><a href="/2014/08/jekyll-clean-theme">jekyll主题</a></li>
+            
+              <li><a href="/2014/07/Lorem-ipsum-dolor-sit-amet">颜色分类</a></li>
+            
+              <li><a href="/2014/06/Maecenas-feugiat-fringilla-nibh">信息总览</a></li>
+            
+              <li><a href="/2013/06/Cum-sociis-natoque-penatibus">第四篇文章</a></li>
+            
+        </ul>
     </div>
 </div>
 
+<div class="sidebar_column">
+    <div>
+        <h3>链接</h3>
+<ul>
+  <li><a href="http://www.cnblogs.com/cnsevennight">个人博客(博客园)</a></li>
+  <li><a href="http://navs.sinaapp.com/">快捷导航</a></li>
+</ul>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+    <div class="clear"></div>
+    <div id="footer">
+        <span>Copyright ©2015 SevenNight</span>
+    </div>
+</div>
 </body>
 </html>
 

@@ -7,36 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-    <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="{{ site.baseurl }}/css/style.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
-
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ site.baseurl }}/">首页</a></li>
-                    <li class="active visible-xs-block"><a href="{{ site.baseurl }}/links.html">链接</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/archive.html">文章</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/about.html">作者简介</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/feed.xml">RSS</a></li>
-                    {% if site.github != '' %}
-                     <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
-                    {% endif %}
-                </ul>
-              </div>
+<div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <h1><a class="headermaintitle" href="{{ site.baseurl }}">{{ site.name }}</a></h1>
+            <h2></h2>
+        </div>
+        <div id="navigator">
+            <ul id="navList">
+                <li><a  class="menu" href="{{ site.baseurl }}/">首页</a></li>
+                <li><a class="menu" href="{{ site.baseurl }}/links.html">链接</a></li>
+                <li><a class="menu" href="{{ site.baseurl }}/archive.html">文章</a></li>
+                <li><a class="menu"  href="{{ site.baseurl }}/about.html">作者简介</a></li>
+                <li><a class="menu" href="{{ site.baseurl }}/feed.xml">RSS</a>
+                {% if site.github != '' %}
+                    <li><a  class="menu" href="https://github.com/{{ site.github }}">Github</a></li>
+                {% endif %}
+            </ul>
         </div>
     </div>
-</div>
