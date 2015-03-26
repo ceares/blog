@@ -35,7 +35,7 @@
             <li id="testpost"></li>
             <script type="text/template" id="postlist">
                 {% for tag in site.tags %}
-                    <a class="tags" href="/show_tag.html?tag={{ tag[0] }}">{{tag[0]}}&nbsp;({{ tag | last | size }})</a>
+                    <a class="tags" href="/show_tag.html?tag=<%encodeURIComponent({{ tag[0] }})%>">{{tag[0]}}&nbsp;({{ tag | last | size }})</a>
                 {% endfor %}
             </script>
             <script type="text/javascript">
