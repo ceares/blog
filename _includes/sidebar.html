@@ -31,7 +31,7 @@
         <ul id="postlistTag">
         </ul>
         <script type="text/javascript">
-            var list ='{% for tag in site.tags %}<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("{{ tag[0] }}")).replace(/%/g,"")+'">{{tag[0]}} &nbsp;({{ tag | last | size }})</a></li>{% endfor %}';
+            var list ='{% for tag in site.tags %}<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("{{ tag[0] }}")).replace(/%/g,"")+'">{{tag[0]}}&nbsp;({{ tag | last | size }})</a></li>{% endfor %}';
             $("#postlistTag").append(list);
         </script>
     </div>

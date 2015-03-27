@@ -6,12 +6,11 @@ layout: default
 <div class="postList">
     <div class="article">
         <h1 class="postTitle"><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
-        <span class="postDesc">{{ post.date | date: "%Y.%m.%d" }} - SevenNight</span>
         {% if site.comments == true and post.comments == true%}
-          <p class="author"><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">文章评论</a></p>
+          <p class="author"><span class="postDesc">{{ post.date | date: "%Y.%m.%d" }} - SevenNight</span><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">文章评论</a></p>
         {% endif %}
         <div class="content">
-            摘要:{{ post.excerpt }}
+			{{ post.excerpt }}
         </div>
     </div>
 </div>
