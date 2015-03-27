@@ -102,6 +102,24 @@ a,a:active{
     padding: 2px 4px;
     border-radius: 3px;
 }
+#postlistTag li{
+    float: left;
+    margin: 0px 0px 5px 5px;
+}
+#showListTag li{
+    margin:10px 0 10px 0 ;
+}
+#showListTag a{
+    color: #2a7ae2;
+    text-decoration: none;
+}
+#showListTag a:hover{
+    color: #DD1144;
+    text-decoration: none;
+}
+#showListTag span{
+    margin-left:2%;
+}
 
 /*主内容*/
 #mainContent{
@@ -110,6 +128,10 @@ a,a:active{
 }
 .postList{
     margin-bottom: 50px;
+}
+.postDesc{
+    font-size: 14px;
+    color: #828282;
 }
 
 /*文章*/

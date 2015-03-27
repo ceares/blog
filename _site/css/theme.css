@@ -35,8 +35,15 @@
 .well h1 {
     color: #ee4444;
     font-size: 1.3em;
+    margin-top:10px;
 }
-
+.well li a{
+    color: #2a7ae2;
+}
+.well li a:hover{
+    color: #ee4444;
+    text-decoration: underline;
+}
 .author {
     color: #ee4444;
 }

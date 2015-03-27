@@ -28,15 +28,11 @@
 <div class="sidebar_column">
     <h3>分类</h3>
     <div>
-        <ul>
-            {% for tag in site.tags %}
-                <a class="tags" href="/show_tag.html?tag={{ tag.[0] }}">{{tag[0]}} &nbsp;({{ tag | last | size }})</a>
-            {% endfor %}
-            <li id="postlist"></li>
-            <script type="text/javascript">
-                var list ='{% for tag in site.tags %}<a class="tags" href="/show_tag.html?tag='+encodeURIComponent("{{ tag.[0] }}")+'">{{tag[0]}} &nbsp;({{ tag | last | size }})</a>;{% endfor %}';
-                $("#postlist").append(list);
-            </script>
+        <ul id="postlistTag">
         </ul>
+        <script type="text/javascript">
+            var list ='{% for tag in site.tags %}<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("{{ tag[0] }}")).replace(/%/g,"")+'">{{tag[0]}} &nbsp;({{ tag | last | size }})</a></li>{% endfor %}';
+            $("#postlistTag").append(list);
+        </script>
     </div>
 </div>

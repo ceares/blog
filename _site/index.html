@@ -39,7 +39,8 @@
         
 <div class="postList">
     <div class="article">
-        <h1 class="postTitle"><a href="/2015/03/06/jekyll-steup">Mar 6, 2015 - jekyll安装</a></h1>
+        <h1 class="postTitle"><a href="/2015/03/06/jekyll-steup">jekyll安装</a></h1>
+        <span class="postDesc">2015.03.06 - SevenNight</span>
         
           <p class="author"><a href="/2015/03/06/jekyll-steup/#disqus_thread">文章评论</a></p>
         
@@ -113,7 +114,8 @@ ruby dk.rb install
 
 <div class="postList">
     <div class="article">
-        <h1 class="postTitle"><a href="/2014/08/23/jekyll-clean-theme">Aug 23, 2014 - jekyll主题</a></h1>
+        <h1 class="postTitle"><a href="/2014/08/23/jekyll-clean-theme">jekyll主题</a></h1>
+        <span class="postDesc">2014.08.23 - SevenNight</span>
         
         <div class="content">
             <p>Welcome to the sample post for the Jekyll Clean theme.</p>
@@ -196,7 +198,8 @@ respective owners:</p>
 
 <div class="postList">
     <div class="article">
-        <h1 class="postTitle"><a href="/2014/07/23/Lorem-ipsum-dolor-sit-amet">Jul 23, 2014 - 颜色分类</a></h1>
+        <h1 class="postTitle"><a href="/2014/07/23/Lorem-ipsum-dolor-sit-amet">颜色分类</a></h1>
+        <span class="postDesc">2014.07.23 - SevenNight</span>
         
           <p class="author"><a href="/2014/07/23/Lorem-ipsum-dolor-sit-amet/#disqus_thread">文章评论</a></p>
         
@@ -214,7 +217,7 @@ respective owners:</p>
 
 <div class="pagination">
   
-  <span>Page: 1 / 3</span>
+  <span>1 / 3</span>
   
   <a href="/page2" class="next">下一页</a>
   
@@ -265,15 +268,12 @@ respective owners:</p>
 <div class="sidebar_column">
     <h3>分类</h3>
     <div>
-        <ul>
-            
-                <a class="tags" href="/show_tag.html?tag=test">test&nbsp;(2)</a>
-            
-                <a class="tags" href="/show_tag.html?tag=sample">sample&nbsp;(1)</a>
-            
-                <a class="tags" href="/show_tag.html?tag=基础">基础&nbsp;(1)</a>
-            
+        <ul id="postlistTag">
         </ul>
+        <script type="text/javascript">
+            var list ='<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("test")).replace(/%/g,"")+'">test &nbsp;(2)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("sample")).replace(/%/g,"")+'">sample &nbsp;(1)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("基础")).replace(/%/g,"")+'">基础 &nbsp;(1)</a></li>';
+            $("#postlistTag").append(list);
+        </script>
     </div>
 </div>
 

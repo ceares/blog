@@ -37,13 +37,13 @@
 <div id="main">
     <div id="mainContent">
         <div>
-    <ul id="posttag"></ul>
+    <ul id="showListTag"></ul>
 </div>
 
 <script src="/js/Jquery.Query.js"></script>
 <script type="text/javascript">
     $(function(){
-        var dataStr = '{ "test":[{"url":"/2015/03/06/jekyll-steup", "title":"jekyll安装", "date":"2015-03-06"},{"url":"/2014/08/23/jekyll-clean-theme", "title":"jekyll主题", "date":"2014-08-23"}],"sample":[{"url":"/2015/03/06/jekyll-steup", "title":"jekyll安装", "date":"2015-03-06"}],"基础":[{"url":"/2015/03/06/jekyll-steup", "title":"jekyll安装", "date":"2015-03-06"}] }',
+        var dataStr = '{ "'+(encodeURIComponent("test")).replace(/%/g,"")+'":[{"url":"/2015/03/06/jekyll-steup", "title":"jekyll安装", "date":"2015-03-06"},{"url":"/2014/08/23/jekyll-clean-theme", "title":"jekyll主题", "date":"2014-08-23"}],"'+(encodeURIComponent("sample")).replace(/%/g,"")+'":[{"url":"/2015/03/06/jekyll-steup", "title":"jekyll安装", "date":"2015-03-06"}],"'+(encodeURIComponent("基础")).replace(/%/g,"")+'":[{"url":"/2015/03/06/jekyll-steup", "title":"jekyll安装", "date":"2015-03-06"}] }',
         data = JSON.parse(dataStr),
         curTag = $.query.get("tag"),
         archieves = data[curTag];
@@ -51,7 +51,7 @@
         for(var i=0;i<archieves.length;i++){
             postlist+='<li><a href="'+archieves[i].url+'">'+archieves[i].title+'</a><span>'+archieves[i].date+'</span></li>';
         }
-        $("#posttag").append(postlist);
+        $("#showListTag").append(postlist);
     });
 
 </script>
@@ -101,15 +101,12 @@
 <div class="sidebar_column">
     <h3>分类</h3>
     <div>
-        <ul>
-            
-                <a class="tags" href="/show_tag.html?tag=test">test&nbsp;(2)</a>
-            
-                <a class="tags" href="/show_tag.html?tag=sample">sample&nbsp;(1)</a>
-            
-                <a class="tags" href="/show_tag.html?tag=基础">基础&nbsp;(1)</a>
-            
+        <ul id="postlistTag">
         </ul>
+        <script type="text/javascript">
+            var list ='<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("test")).replace(/%/g,"")+'">test &nbsp;(2)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("sample")).replace(/%/g,"")+'">sample &nbsp;(1)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("基础")).replace(/%/g,"")+'">基础 &nbsp;(1)</a></li>';
+            $("#postlistTag").append(list);
+        </script>
     </div>
 </div>
 

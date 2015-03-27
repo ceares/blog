@@ -39,6 +39,7 @@
         <div class="article">
             <div class="well">
                 <h1><a href="/2013/05/23/Nulla-vel-risus-dapibus">May 23, 2013 - 评论博客文章</a></h1>
+                <span class="postDesc">2013.05.23 - SevenNight</span>
                 
                 <p class="author"><a href="#disqus_thread">文章评论</a></p>
                 
@@ -117,15 +118,12 @@
 <div class="sidebar_column">
     <h3>分类</h3>
     <div>
-        <ul>
-            
-                <a class="tags" href="/show_tag.html?tag=test">test&nbsp;(2)</a>
-            
-                <a class="tags" href="/show_tag.html?tag=sample">sample&nbsp;(1)</a>
-            
-                <a class="tags" href="/show_tag.html?tag=基础">基础&nbsp;(1)</a>
-            
+        <ul id="postlistTag">
         </ul>
+        <script type="text/javascript">
+            var list ='<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("test")).replace(/%/g,"")+'">test &nbsp;(2)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("sample")).replace(/%/g,"")+'">sample &nbsp;(1)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("基础")).replace(/%/g,"")+'">基础 &nbsp;(1)</a></li>';
+            $("#postlistTag").append(list);
+        </script>
     </div>
 </div>
 
