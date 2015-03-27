@@ -3,6 +3,7 @@ layout: post
 title: "jekyll安装"
 date: 2015-03-05 12:27:01 -0700
 comments: true
+desc:windows上面的jekyll运行环境需要下载ruby，过程颇为复杂！
 tags: [test, sample,基础]
 ---
 
@@ -64,4 +65,4 @@ DevKit 是一个在 Windows 上帮助简化安装及使用 Ruby C/C++ 扩展如 
 
     ruby dk.rb review
 
-    ruby dk.rb install
+    ruby dk.rb install 
