@@ -171,6 +171,7 @@ a,a:active{
     color: #64a69c;
 }
 .articletitle{
+    border-bottom: 1px dashed #CCC;
 	color: #3a87ad;
 	padding: 8px 35px 8px 5px;
 	border-radius: 5px;
