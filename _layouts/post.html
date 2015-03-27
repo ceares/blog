@@ -4,13 +4,15 @@
     <div id="mainContent">
         <div class="article">
             <div class="well">
-                <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h1>
-				<p class="author">
-					<span class="postDesc">{{ page.date | date: "%Y.%m.%d" }} - SevenNight</span>
-				{% if site.comments == true and page.comments == true %}
-					<a href="#disqus_thread">文章评论</a>
-                {% endif %}
-				</p>
+				<div class="articletitle">
+					<h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h1>
+					<p class="author">
+						<span class="postDesc">{{ page.date | date: "%Y.%m.%d" }} - SevenNight</span>
+					{% if site.comments == true and page.comments == true %}
+						<a href="#disqus_thread">文章评论</a>
+					{% endif %}
+					</p>
+				</div>
                 <div class="post-content">
                     {{ content }}
                 </div>

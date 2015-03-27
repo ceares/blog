@@ -153,6 +153,7 @@ a,a:active{
 }
 .article .post-content{
     line-height: 2;
+	margin-top:20px;
     margin-bottom: 50px;
 }
 .pagination a{
@@ -168,6 +169,9 @@ a,a:active{
     border-color: #ddd;
     background-color: #eee;
     color: #64a69c;
+}
+.articletitle{
+	
 }
 
 /*footer*/
