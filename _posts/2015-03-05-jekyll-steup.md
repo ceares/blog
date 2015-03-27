@@ -3,7 +3,7 @@ layout: post
 title: "jekyll安装"
 date: 2015-03-05 12:27:01 -0700
 comments: true
-desc:windows上面的jekyll运行环境需要下载ruby，过程颇为复杂！
+desc: windows上面的jekyll运行环境需要下载ruby，过程颇为复杂！
 tags: [test, sample,基础]
 ---
 
