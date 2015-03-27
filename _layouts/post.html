@@ -5,9 +5,12 @@
         <div class="article">
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h1>
-                {% if site.comments == true and page.comments == true %}
-                <p class="author"><span class="postDesc">{{ page.date | date: "%Y.%m.%d" }} - SevenNight</span><a href="#disqus_thread">文章评论</a></p>
+				<p class="author">
+					<span class="postDesc">{{ page.date | date: "%Y.%m.%d" }} - SevenNight</span>
+				{% if site.comments == true and page.comments == true %}
+					<a href="#disqus_thread">文章评论</a>
                 {% endif %}
+				</p>
                 <div class="post-content">
                     {{ content }}
                 </div>
