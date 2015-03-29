@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <title>sevennight</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <!--<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script src="/js/jquery.min.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="/css/icon/style.css">
+    <!--[if lt IE 8]><!-->
+    <link rel="stylesheet" href="/css/icon/ie7/ie7.css">
+    <!--<![endif]-->
 </head>
 
 <body>
@@ -17,7 +21,7 @@
     <div id="header">
         <div id="blogTitle">
             <h1><a class="headermaintitle" href="">sevennight</a></h1>
-            <h2></h2>
+            <h2>年华一去不复返，时光逝去再难回。</h2>
         </div>
         <div id="navigator">
             <ul id="navList">
@@ -26,9 +30,6 @@
                 <li><a class="menu" href="/archive.html">文章</a></li>
                 <li><a class="menu"  href="/about.html">作者简介</a></li>
                 <li><a class="menu" href="/feed.xml">RSS</a>
-                
-                    <li><a  class="menu" href="https://github.com/7ye">Github</a></li>
-                
             </ul>
         </div>
     </div>
@@ -37,8 +38,8 @@
 <div id="main">
     <div id="mainContent">
         <div class="well">
-    <h1>作者</h1>
-    <p>你好，欢迎你.</p>
+    <h1>作者简介</h1>
+    <p>你好，作者很懒，什么都没有写.</p>
 </div>
 
     </div>
@@ -46,6 +47,7 @@
         <!-- 说明 -->
 <div class="sidebar_column">
     <div>
+        <div class="img_avatar"><img src="/img/7yelogo.jpg"></div>
         github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
     </div>
 </div>
@@ -56,51 +58,67 @@
         <h3>最新文章</h3>
         <ul>
             
-              <li><a href="/2015/03/06/jekyll-steup">jekyll安装</a></li>
-            
-              <li><a href="/2014/08/23/jekyll-clean-theme">jekyll主题</a></li>
-            
-              <li><a href="/2014/07/23/Lorem-ipsum-dolor-sit-amet">颜色分类</a></li>
-            
-              <li><a href="/2014/06/23/Maecenas-feugiat-fringilla-nibh">信息总览</a></li>
-            
-              <li><a href="/2013/06/23/Cum-sociis-natoque-penatibus">第四篇文章</a></li>
+              <li><a href="/2015/03/29/jekyll-stuep">win7下jekyll的安装</a></li>
             
         </ul>
     </div>
 </div>
 
+<!-- 标签 -->
+<div class="sidebar_column">
+    <h3></span>标签</h3>
+    <div>
+        <ul id="postlistTag">
+            
+                <li><a class="tags" href="/show_tag.html?tag=资源">资源&nbsp;<span>1</span></a></li>
+            
+                <li><a class="tags" href="/show_tag.html?tag=jekyll">jekyll&nbsp;<span>1</span></a></li>
+            
+                <li><a class="tags" href="/show_tag.html?tag=github">github&nbsp;<span>1</span></a></li>
+            
+            <script type="text/javascript">
+                $(function(){
+                    $("#postlistTag li").each(function(){
+                        var href = $(this).find("a").attr("href").substring(0,$(this).find("a").attr("href").lastIndexOf("tag=")+4);
+                        var str = $(this).find("a").attr("href").split("tag=")[1];
+                        var reg = /^([\u4E00-\u9FA5]+，?)+$/;
+                        var yesorno = str.match(reg) != null;
+                        if (yesorno){
+                            $(this).find("a").attr("href",href+encodeURIComponent(str).replace(/%/g,""));
+                        }
+                    });
+                });
+            </script>
+        </ul>
+    </div>
+</div>
+<div class="clear" style="padding-bottom: 30px;"></div>
+
 <!-- 链接 -->
 <div class="sidebar_column">
     <div>
-        <h3>链接</h3>
+        <h3>小伙伴</h3>
 <ul>
-  <li><a href="http://www.cnblogs.com/cnsevennight">个人博客(博客园)</a></li>
-  <li><a href="http://navs.sinaapp.com/">快捷导航</a></li>
+  <li><a href="http://www.cnblogs.com/cnsevennight" target="_blank">个人博客(博客园)</a></li>
+  <li><a href="http://navs.sinaapp.com/" target="_blank">快捷导航</a></li>
+  <li><a href="http://bingdao.sinaapp.com/" target="_blank">氷刀's blog</a></li>
 </ul>
 
     </div>
 </div>
 
-<!-- 分类 -->
-<div class="sidebar_column">
-    <h3>分类</h3>
-    <div>
-        <ul id="postlistTag">
-        </ul>
-        <script type="text/javascript">
-            var list ='<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("test")).replace(/%/g,"")+'">test &nbsp;(2)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("sample")).replace(/%/g,"")+'">sample &nbsp;(1)</a></li><li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("基础")).replace(/%/g,"")+'">基础 &nbsp;(1)</a></li>';
-            $("#postlistTag").append(list);
-        </script>
-    </div>
-</div>
+
 
     </div>
 </div>
 
     <div class="clear"></div>
     <div id="footer">
-        <span>Copyright ©2015 SevenNight</span>
+        <span>©2015&nbsp;<a href="/about.html">SevenNight</a>&nbsp;&nbsp;版权所有</span>
+        <span><script src="http://s95.cnzz.com/stat.php?id=1254647875&web_id=1254647875" language="JavaScript"></script></span>
+        <span>, 源码托管在 github 上</span>
+        <br/>
+        <a href="https://github.com/7ye/blog" style="text-decoration: none;color: #686868"  target="_blank"><span class="icon-github" style="font-size: 25px;"></span></a>
     </div>
 </div>
 </body>

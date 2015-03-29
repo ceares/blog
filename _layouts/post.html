@@ -6,15 +6,24 @@
             <div class="well">
 				<div class="articletitle">
 					<h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h1>
-					<p class="author">
-						<span class="postDesc">{{ page.date | date: "%Y.%m.%d" }} - SevenNight</span>
+					<p class="postDesc">
+                        <span class="icon-user"></span>SevenNight&nbsp;
+                        <span class="icon-calendar"></span>{{ page.date | date: "%Y-%m-%d" }}&nbsp;
+                        <span class="icon-price-tags"></span>
+                        <span id="postDescTags">
+                            <script type="text/javascript">
+                                //添加标签
+                                var list ='{% for tag in page.tags %}<a href="/show_tag.html?tag='+(encodeURIComponent("{{tag|index}}")).replace(/%/g,"")+'">{{tag|index}}</a>{% endfor %}';
+                                $("#postDescTags").html(list);0
+                            </script>
+                        </span>
 					{% if site.comments == true and page.comments == true %}
-						<a href="#disqus_thread">文章评论</a>
+                        <span class="icon-bubble"></span><a class="author" href="#disqus_thread">文章评论</a>
 					{% endif %}
 					</p>
 				</div>
                 <div class="post-content">
-                    {{ page.desc }}{{ content }}
+                    {{ content }}
                 </div>
                 <!--cnzz tui-->
                 <script  type="text/javascript" c=gd  charset="utf-8"  src="http://tui.cnzz.net/cs.php?id=1000091890"></script>

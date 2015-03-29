@@ -6,10 +6,30 @@ layout: default
 <div class="postList">
     <div class="article">
         <h1 class="postTitle"><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
-		<p class="author">
-			<span class="postDesc">{{ post.date | date: "%Y.%m.%d" }} - SevenNight</span>
+		<p class="postDesc">
+            <span class="icon-user"></span>SevenNight&nbsp;
+            <span class="icon-calendar"></span>{{ post.date | date: "%Y-%m-%d" }}&nbsp;
+            <span class="icon-price-tags"></span>
+            <span id="postDescTags">
+                {% for tag in post.tags %}
+                    <a href="/show_tag.html?tag={{tag|index}}">{{tag|index}}</a>
+                {% endfor %}
+                <script type="text/javascript">
+                    $(function(){
+                        $("#postDescTags a").each(function(){
+                            var href = $(this).attr("href").substring(0,$(this).attr("href").lastIndexOf("tag=")+4);
+                            var str = $(this).attr("href").split("tag=")[1];
+                            var reg = /^([\u4E00-\u9FA5]+，?)+$/;
+                            var yesorno = str.match(reg) != null;
+                            if (yesorno){
+                                $(this).attr("href",href+encodeURIComponent(str).replace(/%/g,""));
+                            }
+                        });
+                    });
+                </script>
+            </span>
         {% if site.comments == true and post.comments == true%}
-			<a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">文章评论</a>
+            <span class="icon-bubble"></span><a class="author" href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">文章评论</a>
         {% endif %}
 		</p>
         <div class="content">

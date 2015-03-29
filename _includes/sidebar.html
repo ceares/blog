@@ -1,6 +1,7 @@
 <!-- 说明 -->
 <div class="sidebar_column">
     <div>
+        <div class="img_avatar"><img src="{{ site.baseurl}}/img/7yelogo.jpg"></div>
         {{ site.description }}
     </div>
 </div>
@@ -17,6 +18,32 @@
     </div>
 </div>
 
+<!-- 标签 -->
+<div class="sidebar_column">
+    <h3></span>标签</h3>
+    <div>
+        <ul id="postlistTag">
+            {% for tag in site.tags %}
+                <li><a class="tags" href="/show_tag.html?tag={{ tag[0] }}">{{tag[0]}}&nbsp;<span>{{ tag | last | size }}</span></a></li>
+            {% endfor %}
+            <script type="text/javascript">
+                $(function(){
+                    $("#postlistTag li").each(function(){
+                        var href = $(this).find("a").attr("href").substring(0,$(this).find("a").attr("href").lastIndexOf("tag=")+4);
+                        var str = $(this).find("a").attr("href").split("tag=")[1];
+                        var reg = /^([\u4E00-\u9FA5]+，?)+$/;
+                        var yesorno = str.match(reg) != null;
+                        if (yesorno){
+                            $(this).find("a").attr("href",href+encodeURIComponent(str).replace(/%/g,""));
+                        }
+                    });
+                });
+            </script>
+        </ul>
+    </div>
+</div>
+<div class="clear" style="padding-bottom: 30px;"></div>
+
 <!-- 链接 -->
 <div class="sidebar_column">
     <div>
@@ -24,15 +51,4 @@
     </div>
 </div>
 
-<!-- 分类 -->
-<div class="sidebar_column">
-    <h3>分类</h3>
-    <div>
-        <ul id="postlistTag">
-        </ul>
-        <script type="text/javascript">
-            var list ='{% for tag in site.tags %}<li><a class="tags" href="/show_tag.html?tag='+(encodeURIComponent("{{ tag[0] }}")).replace(/%/g,"")+'">{{tag[0]}}&nbsp;({{ tag | last | size }})</a></li>{% endfor %}';
-            $("#postlistTag").append(list);
-        </script>
-    </div>
-</div>
+
