@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: sevennight
-description: github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
+description: Github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
 signature: 年华一去不复返，时光逝去再难回。
 
 # url is currently only used only for the RSS feed in feed.xml
