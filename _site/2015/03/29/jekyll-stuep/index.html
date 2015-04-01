@@ -58,6 +58,7 @@
 					</p>
 				</div>
                 <div class="post-content">
+					<div id="catalog"></div>
                     <h1 id="简介">简介</h1>
 
 <h2 id="什么是-jekyll">什么是 jekyll</h2>
@@ -220,9 +221,6 @@ jekyll serve</p>
 <p>服务程序启动成功之后，可以用<a href="http://localhost:4000">localhost:4000</a>浏览网页</p>
 
                 </div>
-                <!--cnzz tui-->
-                <script  type="text/javascript" c=gd  charset="utf-8"  src="http://tui.cnzz.net/cs.php?id=1000091890"></script>
-                <!--cnzz tui-->
                 
                 <div id="disqus_thread">
                     <!-- 多说评论框 start -->
@@ -311,7 +309,6 @@ jekyll serve</p>
 </div>
 
 
-
     </div>
 </div>
     <div class="clear"></div>
@@ -334,8 +331,27 @@ jekyll serve</p>
 				}  
 			});
 			$('.actGotop').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);}); //火箭动画停留时间，越小消失的越快~
+			
+			//生成目录
+			x = $(".post-content").find("h1,h2");
+			n = 0;
+			c = "";
+			x.each(function() {
+				$(this).before("<a name='anchor" + n + "'></a>");
+				if ($(this).prop('tagName') == "H1") //不可用"h1"
+				{
+					c=c+"<a href='#anchor"+n+"' class='anchor-h1'>"+$(this).text()+"</a><br/>";
+				}
+				else {
+					c=c+"<a href='#anchor"+n+"' class='anchor-h2'>"+$(this).text()+"</a><br/>";
+				}
+				n = n + 1;
+			});
+			$("#catalog").html('<p>目录结构：</p>'+c);
 		});
 		</script>
+		
+		
     </div>
 </div>
 </body>

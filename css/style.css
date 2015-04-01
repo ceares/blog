@@ -243,6 +243,24 @@ a:hover{
 .articletitle h1 a{
     text-decoration: none;
 }
+#catalog{
+	font-size: 13px;
+	max-width: 250px;
+	float: right;
+	margin-left: 10px;
+	border-left: 5px solid #D6DBDF;
+	padding: 5px 0px 5px 5px;
+}
+#catalog p{
+	font-weight:bold;
+	font-size:14px;
+}
+.anchor-h1{
+	font-weight:bold;
+}
+.anchor-h2{
+	margin-left:20px;
+}
 
 /*footer*/
 #footer {
