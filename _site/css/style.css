@@ -1,4 +1,4 @@
-body{
+﻿body{
     font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
@@ -210,6 +210,9 @@ a:hover{
 	margin-top:20px;
     margin-bottom: 50px;
 }
+.post-content a{
+	color: #4183C4;
+}
 .pagination a{
     color: #555;
     padding: 6px 12px;
@@ -254,6 +257,24 @@ a:hover{
 }
 #footer a{
     color: #21759b;
+}
+.actGotop {
+	position: fixed;
+	_position: absolute;
+	bottom: 100px;
+	right: 20px;
+	width: 54px;
+	height: 54px;
+	display: none;
+}
+
+.actGotop a,.actGotop a:link {
+	width: 54px;
+	height: 54px;
+	display: inline-block;
+	background: url(../img/gotopd.gif) no-repeat;
+	_background: url(../img/gotopd.gif) no-repeat;
+	outline: none;
 }
 
 

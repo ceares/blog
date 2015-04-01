@@ -251,7 +251,7 @@ jekyll serve</p>
 <div class="sidebar_column">
     <div>
         <div class="img_avatar"><img src="/img/7yelogo.jpg"></div>
-        github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
+        Github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
     </div>
 </div>
 
@@ -321,6 +321,21 @@ jekyll serve</p>
         <span>, 源码托管在 github 上</span>
         <br/>
         <a href="https://github.com/7ye/blog" style="text-decoration: none;color: #686868"  target="_blank"><span class="icon-github" style="font-size: 25px;"></span></a>
+		
+		<!-- 返回顶部 -->
+		<div class="actGotop"><a href="javascript:;" title="返回顶部"></a></div>
+		<script type="text/javascript">
+		$(function(){	
+			$(window).scroll(function() {		
+				if($(window).scrollTop() >= 100){ //向下滚动像素大于这个值时，即出现小火箭~
+					$('.actGotop').fadeIn(300); //火箭淡入的时间，越小出现的越快~
+				}else{    
+					$('.actGotop').fadeOut(300); //火箭淡出的时间，越小消失的越快~
+				}  
+			});
+			$('.actGotop').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);}); //火箭动画停留时间，越小消失的越快~
+		});
+		</script>
     </div>
 </div>
 </body>
