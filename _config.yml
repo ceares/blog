@@ -4,6 +4,12 @@ name: sevennight
 description: Github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
 signature: 年华一去不复返，时光逝去再难回。
 
+#author message
+author :
+  name : sevennight
+  email : huc_sevennight@163.com
+  github: https://github.com/7ye/blog
+  
 # url is currently only used only for the RSS feed in feed.xml
 url: http://7ye.xyz
 
@@ -16,7 +22,7 @@ baseurl: ""
 picurl: http://7u2sny.com1.z0.glb.clouddn.com
 
 # This can be '' to hide the Github nav button
-github: https://github.com/7ye/blog
+
 
 # Set this to your UA-# value, or '' to disable the block completely
 gaaccount: ''
