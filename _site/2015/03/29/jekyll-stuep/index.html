@@ -225,8 +225,6 @@ jekyll serve</p>
                 <div id="disqus_thread">
                     <!-- 多说评论框 start -->
                     <div class="ds-thread" data-thread-key="/2015/03/29/jekyll-stuep" data-title="win7下jekyll的安装" data-url="http://7ye.xyz/2015/03/29/jekyll-stuep"></div>
-                    <!-- 多说评论框 end -->
-                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
                     <script type="text/javascript">
                         var duoshuoQuery = {short_name:"sevennight"};
                         (function() {
@@ -241,6 +239,26 @@ jekyll serve</p>
                     <!-- 多说公共JS代码 end -->
                 </div>
                 
+				<script type="text/javascript">
+					$(document).ready(function() {
+						//生成目录
+						x = $(".post-content").find("h1,h2");
+						n = 0;
+						c = "";
+						x.each(function() {
+							$(this).before("<a name='anchor" + n + "'></a>");
+							if ($(this).prop('tagName') == "H1") //不可用"h1"
+							{
+								c=c+"<a href='#anchor"+n+"' class='anchor-h1'>"+$(this).text()+"</a><br/>";
+							}
+							else {
+								c=c+"<a href='#anchor"+n+"' class='anchor-h2'>"+$(this).text()+"</a><br/>";
+							}
+							n = n + 1;
+						});
+						$("#catalog").html('<p>目录结构：</p>'+c);
+					}
+				</script>
             </div>
         </div>
     </div>
@@ -315,7 +333,7 @@ jekyll serve</p>
     <div id="footer">
         <span>©2015&nbsp;<a href="/about.html">SevenNight</a>&nbsp;&nbsp;版权所有</span>
         <span><script src="http://s95.cnzz.com/stat.php?id=1254647875&web_id=1254647875" language="JavaScript"></script></span>
-        <span>, 源码托管在 github 上</span>
+        <span>, 源码托管在 Github 上</span>
         <br/>
         <a href="https://github.com/7ye/blog" style="text-decoration: none;color: #686868"  target="_blank"><span class="icon-github" style="font-size: 25px;"></span></a>
 		
@@ -331,23 +349,6 @@ jekyll serve</p>
 				}  
 			});
 			$('.actGotop').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);}); //火箭动画停留时间，越小消失的越快~
-			
-			//生成目录
-			x = $(".post-content").find("h1,h2");
-			n = 0;
-			c = "";
-			x.each(function() {
-				$(this).before("<a name='anchor" + n + "'></a>");
-				if ($(this).prop('tagName') == "H1") //不可用"h1"
-				{
-					c=c+"<a href='#anchor"+n+"' class='anchor-h1'>"+$(this).text()+"</a><br/>";
-				}
-				else {
-					c=c+"<a href='#anchor"+n+"' class='anchor-h2'>"+$(this).text()+"</a><br/>";
-				}
-				n = n + 1;
-			});
-			$("#catalog").html('<p>目录结构：</p>'+c);
 		});
 		</script>
 		

@@ -30,8 +30,6 @@
                 <div id="disqus_thread">
                     <!-- 多说评论框 start -->
                     <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="http://7ye.xyz{{ page.url }}"></div>
-                    <!-- 多说评论框 end -->
-                    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
                     <script type="text/javascript">
                         var duoshuoQuery = {short_name:"sevennight"};
                         (function() {
@@ -46,6 +44,26 @@
                     <!-- 多说公共JS代码 end -->
                 </div>
                 {% endif %}
+				<script type="text/javascript">
+					$(document).ready(function() {
+						//生成目录
+						x = $(".post-content").find("h1,h2");
+						n = 0;
+						c = "";
+						x.each(function() {
+							$(this).before("<a name='anchor" + n + "'></a>");
+							if ($(this).prop('tagName') == "H1") //不可用"h1"
+							{
+								c=c+"<a href='#anchor"+n+"' class='anchor-h1'>"+$(this).text()+"</a><br/>";
+							}
+							else {
+								c=c+"<a href='#anchor"+n+"' class='anchor-h2'>"+$(this).text()+"</a><br/>";
+							}
+							n = n + 1;
+						});
+						$("#catalog").html('<p>目录结构：</p>'+c);
+					}
+				</script>
             </div>
         </div>
     </div>
