@@ -6,10 +6,6 @@ signature: 年华一去不复返，时光逝去再难回。
 
 #author message
 title: sevennight
-author :
-  name : sevennight
-  email : huc_sevennight@163.com
-  github: https://github.com/7ye/blog
   
 # url is currently only used only for the RSS feed in feed.xml
 url: http://7ye.xyz
