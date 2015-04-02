@@ -176,8 +176,12 @@ a:hover{
     color: #999;
 }
 #postDescTags a{
-    color: #21759b;
-    margin-right:7px;
+    color: #999;
+	margin-right:3px;
+	margin-left:3px;
+}
+#postDescTags a:hover{
+	color:#000;
 }
 .author {
     color: #ee4444;

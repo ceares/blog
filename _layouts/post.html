@@ -13,8 +13,8 @@
                         <span id="postDescTags">
                             <script type="text/javascript">
                                 //添加标签
-                                var list ='{% for tag in page.tags %}<a href="/show_tag.html?tag='+(encodeURIComponent("{{tag|index}}")).replace(/%/g,"")+'">{{tag|index}}</a>{% endfor %}';
-                                $("#postDescTags").html(list);0
+                                var list ='{% for tag in page.tags %}<a href="/show_tag.html?tag='+(encodeURIComponent("{{tag|index}}")).replace(/%/g,"")+'">{{tag|index}}</a>,{% endfor %}';
+                                $("#postDescTags").html(list.substring(0,list.length-2));
                             </script>
                         </span>
 					{% if site.comments == true and page.comments == true %}

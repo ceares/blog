@@ -12,6 +12,8 @@
     <link href="/css/theme.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
     <link rel="stylesheet" href="/css/icon/style.css">
+	<link rel="stylesheet" href="/css/pygments.css">
+	
     <!--[if lt IE 8]><!-->
     <link rel="stylesheet" href="/css/icon/ie7/ie7.css">
     <!--<![endif]-->
@@ -49,8 +51,8 @@
                         <span id="postDescTags">
                             <script type="text/javascript">
                                 //添加标签
-                                var list ='<a href="/show_tag.html?tag='+(encodeURIComponent("资源")).replace(/%/g,"")+'">资源</a><a href="/show_tag.html?tag='+(encodeURIComponent("jekyll")).replace(/%/g,"")+'">jekyll</a><a href="/show_tag.html?tag='+(encodeURIComponent("github")).replace(/%/g,"")+'">github</a>';
-                                $("#postDescTags").html(list);0
+                                var list ='<a href="/show_tag.html?tag='+(encodeURIComponent("资源")).replace(/%/g,"")+'">资源</a>,<a href="/show_tag.html?tag='+(encodeURIComponent("jekyll")).replace(/%/g,"")+'">jekyll</a>,<a href="/show_tag.html?tag='+(encodeURIComponent("github")).replace(/%/g,"")+'">github</a>,';
+                                $("#postDescTags").html(list.substring(0,list.length-2));
                             </script>
                         </span>
 					
@@ -142,12 +144,12 @@ notepad config.yml</p>
 <p><span style="color:red;">注</span>：这里安装jekyll gem的时候有因为他访问的镜像是在国外的 <code>https://rubygems.org/</code>网站上，所以如果你在没有开代理的情况下，国内有可能访问不到，导致不能安装或者报错；</p>
 
 <p><strong><em>解决方法</em></strong>：依次运行以下命令</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">gem sources --remove https://rubygems.org/
-gem sources -a https://ruby.taobao.org/
-gem sources -l
-输出示例：
-*** CURRENT SOURCES ***
-https://ruby.taobao.org
+<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="n">gem</span> <span class="n">sources</span> <span class="o">--</span><span class="n">remove</span> <span class="nl">https:</span><span class="c1">//rubygems.org/</span>
+    <span class="n">gem</span> <span class="n">sources</span> <span class="o">-</span><span class="n">a</span> <span class="nl">https:</span><span class="c1">//ruby.taobao.org/</span>
+    <span class="n">gem</span> <span class="n">sources</span> <span class="o">-</span><span class="n">l</span>
+    <span class="n">输出示例</span><span class="err">：</span>
+    <span class="o">***</span> <span class="n">CURRENT</span> <span class="n">SOURCES</span> <span class="o">***</span>
+    <span class="nl">https:</span><span class="c1">//ruby.taobao.org</span>
 </code></pre></div>
 <p>确认只有<code>https://ruby.taobao.org</code>一个，如果还有其他的镜像来源，同上用<code>gem sources --remove 镜像网址</code>删除，保证只剩下<code>https://ruby.taobao.org</code>，万无一失之后再到命令行执行以下命令</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">gem install jekyll
