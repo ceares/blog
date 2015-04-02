@@ -1,23 +1,23 @@
 ---
 layout: default
 ---
-
+<script src="{{ site.baseurl }}/js/Jquery.Query.js"></script>
 <div>
-    <ul id="showListTag"></ul>
+    <ul id="showListTag">
+		<script type="text/javascript">
+			$(function(){
+				var dataStr = '{ {% for tag in site.tags %}{% if tag[0] != site.tags.first[0] %},{% endif %}"'+(encodeURIComponent("{{ tag[0] }}")).replace(/%/g,"")+'":[{% for post in tag[1] %}{% if post != tag[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%Y-%m-%d"}}"}{% endfor %}]{% endfor %} }',
+				data = JSON.parse(dataStr),
+				curTag = $.query.get("tag"),
+				archieves = data[curTag];
+				var postlist = "";
+				for(var i=0;i<archieves.length;i++){
+					postlist+='<li><span>'+archieves[i].date+'</span> » <a href="{{ site.baseurl }}'+archieves[i].url+'">'+archieves[i].title+'</a></li>';
+				}
+				$("#showListTag").append(postlist);
+			});
+		</script>
+	</ul>
 </div>
 
-<script src="{{ site.baseurl }}/js/Jquery.Query.js"></script>
-<script type="text/javascript">
-    $(function(){
-        var dataStr = '{ {% for tag in site.tags %}{% if tag[0] != site.tags.first[0] %},{% endif %}"'+(encodeURIComponent("{{ tag[0] }}")).replace(/%/g,"")+'":[{% for post in tag[1] %}{% if post != tag[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%Y-%m-%d"}}"}{% endfor %}]{% endfor %} }',
-        data = JSON.parse(dataStr),
-        curTag = $.query.get("tag"),
-        archieves = data[curTag];
-        var postlist = "";
-        for(var i=0;i<archieves.length;i++){
-            postlist+='<li><span>'+archieves[i].date+'</span> » <a href="{{ site.baseurl }}'+archieves[i].url+'">'+archieves[i].title+'</a></li>';
-        }
-        $("#showListTag").append(postlist);
-    });
 
-</script>
