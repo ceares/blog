@@ -118,6 +118,17 @@ cd myblog
 jekyll serve
 
 服务程序启动成功之后，可以用[localhost:4000][9]浏览网页
+```c
+/* hello world demo */
+ #include <stdio.h>
+ int main(int argc, char **argv)
+ {
+     printf("Hello, World!\n");
+     return 0;
+ }
+
+```
+
 
 
   [1]: http://rubyinstaller.org/downloads/
