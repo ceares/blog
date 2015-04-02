@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>sevennight</title>
+		<title></title>
 		<description>Github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn</description>
 		<link>http://7ye.xyz</link>
 		<atom:link href="http://7ye.xyz/feed.xml" rel="self" type="application/rss+xml" />

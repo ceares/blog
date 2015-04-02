@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title == null %}{{site.title}}{% else %}{{page.title}}{% endif %}
+    </title>
+    <meta name="author" content="{{ site.author.name }}">
     
     <script src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
     <link href="{{ site.baseurl }}/css/style.css" rel="stylesheet">
@@ -19,12 +21,12 @@
 <div id="home">
     <div id="header">
         <div id="blogTitle">
-            <h1><a class="headermaintitle" href="{{ site.baseurl }}">{{ site.name }}</a></h1>
+            <h1><a class="headermaintitle" href="{{ site.baseurl }}">{{ site.author.name }}</a></h1>
             <h2>{{ site.signature }}</h2>
         </div>
         <div id="navigator">
             <ul id="navList">
-                <li><a  class="menu" href="{{ site.baseurl }}/">首页</a></li>
+                <li><a class="menu" href="{{ site.baseurl }}/">首页</a></li>
                 <li><a class="menu" href="{{ site.baseurl }}/links.html">链接</a></li>
                 <li><a class="menu" href="{{ site.baseurl }}/archive.html">文章</a></li>
                 <li><a class="menu"  href="{{ site.baseurl }}/about.html">作者简介</a></li>

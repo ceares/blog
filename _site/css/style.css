@@ -36,6 +36,7 @@ a:hover{
     margin-bottom: 30px;
 }
 #blogTitle h1 {
+    font-family: 'Playball', cursive;
     font-size: 26px;
     font-weight: bold;
     line-height: 1.5em;

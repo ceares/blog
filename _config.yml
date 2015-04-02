@@ -1,13 +1,14 @@
 # Jekyll configuration
 
-name: sevennight
+title: sevennight(7夜)
 description: Github博客地址<br/>http://7ye.xyz<br/>博客园地址<br/>http://www.sevennight.cn
 signature: 年华一去不复返，时光逝去再难回。
 
 #author message
-title: sevennight
-github: https://github.com/7ye
-  
+author:
+  github: https://github.com/7ye
+  name: SevenNight
+
 # url is currently only used only for the RSS feed in feed.xml
 url: http://7ye.xyz
 
@@ -26,6 +27,9 @@ gaaccount: ''
 # setting below must also be true. Individual posts can override 'comments' to
 # disable on a post-by-post basis
 comments: true
+
+#Open catalog Structure
+catalog : true
 
 permalink: /:year/:month/:title
 permalink: /:year/:month/:day/:title

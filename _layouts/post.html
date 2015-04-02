@@ -44,26 +44,29 @@
                     <!-- 多说公共JS代码 end -->
                 </div>
                 {% endif %}
-				<script type="text/javascript">
-					$(document).ready(function() {
-						//生成目录
-						x = $(".post-content").find("h1,h2");
-						n = 0;
-						c = "";
-						x.each(function() {
-							$(this).before("<a name='anchor" + n + "'></a>");
-							if ($(this).prop('tagName') == "H1") //不可用"h1"
-							{
-								c=c+"<a href='#anchor"+n+"' class='anchor-h1'>"+$(this).text()+"</a><br/>";
-							}
-							else {
-								c=c+"<a href='#anchor"+n+"' class='anchor-h2'>"+$(this).text()+"</a><br/>";
-							}
-							n = n + 1;
-						});
-						$("#catalog").html('<p>目录结构：</p>'+c);
-					}
-				</script>
+                {% if site.catalog == true and page.catalog == true %}
+                    <!--目录结构生成-->
+    				<script type="text/javascript">
+    					$(document).ready(function() {
+    						//生成目录
+    						x = $(".post-content").find("h1,h2");
+    						n = 0;
+    						c = "";
+    						x.each(function() {
+    							$(this).before("<a name='anchor" + n + "'></a>");
+    							if ($(this).prop('tagName') == "H1") //不可用"h1"
+    							{
+    								c=c+"<a href='#anchor"+n+"' class='anchor-h1'>"+$(this).text()+"</a><br/>";
+    							}
+    							else {
+    								c=c+"<a href='#anchor"+n+"' class='anchor-h2'>"+$(this).text()+"</a><br/>";
+    							}
+    							n = n + 1;
+    						});
+    						$("#catalog").html('<p>目录结构：</p>'+c);
+    					});
+    				</script>
+                {% endif %}
             </div>
         </div>
     </div>

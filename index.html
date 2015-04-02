@@ -1,13 +1,12 @@
 ---
 layout: default
 ---
-
 {% for post in paginator.posts %}
 <div class="postList">
     <div class="article">
         <h1 class="postTitle"><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
 		<p class="postDesc">
-            <span class="icon-user"></span>SevenNight&nbsp;
+            <span class="icon-user"></span>{{site.author.name}}&nbsp;
             <span class="icon-calendar"></span>{{ post.date | date: "%Y-%m-%d" }}&nbsp;
             <span class="icon-price-tags"></span>
             <span id="postDescTags">

@@ -3,6 +3,7 @@ layout: post
 title: "win7下jekyll的安装"
 date: 2015-03-28 09:29:01 -0700
 comments: true
+catalog : true
 desc: jekyll是一个简单的免费的Blog生成工具，是一个生成静态网页的工具，不需要数据库支持，可以免费部署在Github上，而且可以绑定自己的域名。这里介绍如何在win7下安装jekyll环境，在本地执行网页程序；
 tags: [资源, jekyll, github]
 category: 资源
