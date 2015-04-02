@@ -61,13 +61,14 @@ jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和W
 <span style="color:red;">注</span>：这里安装jekyll gem的时候有因为他访问的镜像是在国外的 `https://rubygems.org/`网站上，所以如果你在没有开代理的情况下，国内有可能访问不到，导致不能安装或者报错；
 
 ***解决方法***：依次运行以下命令
-
+```java
     gem sources --remove https://rubygems.org/
     gem sources -a https://ruby.taobao.org/
     gem sources -l
     输出示例：
     *** CURRENT SOURCES ***
     https://ruby.taobao.org
+```
 
 确认只有`https://ruby.taobao.org`一个，如果还有其他的镜像来源，同上用`gem sources --remove 镜像网址`删除，保证只剩下`https://ruby.taobao.org`，万无一失之后再到命令行执行以下命令
 
