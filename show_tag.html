@@ -14,7 +14,7 @@ layout: default
 				for(var i=0;i<archieves.length;i++){
 					postlist+='<li><span>'+archieves[i].date+'</span> » <a href="{{ site.baseurl }}'+archieves[i].url+'">'+archieves[i].title+'</a></li>';
 				}
-				$("#showListTag").append(postlist);
+				$("#showListTag").html(postlist);
 			});
 		</script>
 	</ul>
