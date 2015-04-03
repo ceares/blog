@@ -91,7 +91,7 @@ a:hover{
 }
 .sidebar_column{
     font-size:13px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     line-height: 1.5;
 }
 .sidebar_column ul{
@@ -107,7 +107,7 @@ a:hover{
     color: #21759b;
 }
 .sidebar_column h3{
-    font-size: 14px;
+    font-size: 12px;
 }
 .tags{
     background: #eee;
