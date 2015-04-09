@@ -42,6 +42,45 @@
         
 <div class="postList">
     <div class="article">
+        <h1 class="postTitle"><a href="/2015/09/04/testcode">测试代码样式</a></h1>
+		<p class="postDesc">
+            <span class="icon-user"></span>SevenNight&nbsp;
+            <span class="icon-calendar"></span>2015-09-04&nbsp;
+            <span class="icon-price-tags"></span>
+            <span id="postDescTags">
+                
+                    <a href="/show_tag.html?tag=java">java</a>
+                
+                    <a href="/show_tag.html?tag=代码">代码</a>
+                
+                    <a href="/show_tag.html?tag=样式">样式</a>
+                
+                <script type="text/javascript">
+                    $(function(){
+                        $("#postDescTags a").each(function(){
+                            var href = $(this).attr("href").substring(0,$(this).attr("href").lastIndexOf("tag=")+4);
+                            var str = $(this).attr("href").split("tag=")[1];
+                            var reg = /^([\u4E00-\u9FA5]+，?)+$/;
+                            var yesorno = str.match(reg) != null;
+                            if (yesorno){
+                                $(this).attr("href",href+encodeURIComponent(str).replace(/%/g,""));
+                            }
+                        });
+                    });
+                </script>
+            </span>
+        
+            <span class="icon-bubble"></span><a class="author" href="/2015/09/04/testcode/#disqus_thread">文章评论</a>
+        
+		</p>
+        <div class="content">
+			测试代码样式
+        </div>
+    </div>
+</div>
+
+<div class="postList">
+    <div class="article">
         <h1 class="postTitle"><a href="/2015/03/29/jekyll-stuep">win7下jekyll的安装</a></h1>
 		<p class="postDesc">
             <span class="icon-user"></span>SevenNight&nbsp;
@@ -102,6 +141,8 @@
         <h3>最新文章</h3>
         <ul>
             
+              <li><a href="/2015/09/04/testcode">测试代码样式</a></li>
+            
               <li><a href="/2015/03/29/jekyll-stuep">win7下jekyll的安装</a></li>
             
         </ul>
@@ -119,6 +160,12 @@
                 <li><a class="tags" href="/show_tag.html?tag=jekyll">jekyll&nbsp;<span>1</span></a></li>
             
                 <li><a class="tags" href="/show_tag.html?tag=github">github&nbsp;<span>1</span></a></li>
+            
+                <li><a class="tags" href="/show_tag.html?tag=java">java&nbsp;<span>1</span></a></li>
+            
+                <li><a class="tags" href="/show_tag.html?tag=代码">代码&nbsp;<span>1</span></a></li>
+            
+                <li><a class="tags" href="/show_tag.html?tag=样式">样式&nbsp;<span>1</span></a></li>
             
             <script type="text/javascript">
                 $(function(){

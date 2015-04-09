@@ -12,7 +12,7 @@ layout: default
 				archieves = data[curTag];
 				var postlist = "";
 				for(var i=0;i<archieves.length;i++){
-					postlist+='<li><span>'+archieves[i].date+'</span> » <a href="{{ site.baseurl }}'+archieves[i].url+'">'+archieves[i].title+'</a></li>';
+					postlist+='<li><span class="icon-folder-open">'+archieves[i].date+'</span> » <a href="{{ site.baseurl }}'+archieves[i].url+'">'+archieves[i].title+'</a></li>';
 				}
 				$("#showListTag").html(postlist);
 			});

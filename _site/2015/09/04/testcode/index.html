@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>sevennight(7夜)
+    <title>测试代码样式
     </title>
     <meta name="author" content="SevenNight">
     
@@ -39,24 +39,89 @@
 
 <div id="main">
     <div id="mainContent">
-        <div class="well">
+        <div class="article">
+            <div class="well">
+				<div class="articletitle">
+					<h1><a href="/2015/09/04/testcode">测试代码样式</a></h1>
+					<p class="postDesc">
+                        <span class="icon-user"></span>SevenNight&nbsp;
+                        <span class="icon-calendar"></span>2015-09-04&nbsp;
+                        <span class="icon-price-tags"></span>
+                        <span id="postDescTags">
+                            <script type="text/javascript">
+                                //添加标签
+                                var list ='<a href="/show_tag.html?tag='+(encodeURIComponent("java")).replace(/%/g,"")+'">java</a><a href="/show_tag.html?tag='+(encodeURIComponent("代码")).replace(/%/g,"")+'">代码</a><a href="/show_tag.html?tag='+(encodeURIComponent("样式")).replace(/%/g,"")+'">样式</a>';
+                                $("#postDescTags").html(list);
+                            </script>
+                        </span>
+					
+                        <span class="icon-bubble"></span><a class="author" href="#disqus_thread">文章评论</a>
+					
+					</p>
+				</div>
+                <div class="post-content">
+					<div id="catalog"></div>
+                    <p>这个是弄着玩的</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="cm">/**</span>
+<span class="cm">     * 设置标签</span>
+<span class="cm">     * @author Administrator</span>
+<span class="cm">     *</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">PlatSetTag</span> <span class="kd">extends</span> <span class="n">TagSupport</span> <span class="o">{</span>
 
-    
-        <h1>2015</h1>
-        <ul>
-    
-    <li><a href="/2015/09/04/testcode">09 4 - 测试代码样式</a></li>
+        <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8940722154025495008L</span><span class="o">;</span>
 
-    
-        
-        
-        
-    
-    <li><a href="/2015/03/29/jekyll-stuep">03 29 - win7下jekyll的安装</a></li>
+        <span class="kd">private</span> <span class="n">Integer</span> <span class="n">id</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="n">String</span> <span class="n">key</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="n">String</span> <span class="n">value</span><span class="o">;</span>
 
-</ul>
-</div>
 
+    <span class="o">}</span>
+</code></pre></div>
+                </div>
+                
+                <div id="disqus_thread">
+                    <!-- 多说评论框 start -->
+                    <div class="ds-thread" data-thread-key="/2015/09/04/testcode" data-title="测试代码样式" data-url="http://7ye.xyz/2015/09/04/testcode"></div>
+                    <script type="text/javascript">
+                        var duoshuoQuery = {short_name:"ds7ye"};
+                        (function() {
+                            var ds = document.createElement('script');
+                            ds.type = 'text/javascript';ds.async = true;
+                            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                            ds.charset = 'UTF-8';
+                            (document.getElementsByTagName('head')[0]
+                                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                        })();
+                    </script>
+                    <!-- 多说公共JS代码 end -->
+                </div>
+                
+                
+                    <!--目录结构生成-->
+    				<script type="text/javascript">
+    					$(document).ready(function() {
+    						//生成目录
+    						x = $(".post-content").find("h1,h2");
+    						n = 0;
+    						c = "";
+    						x.each(function() {
+    							$(this).before("<a name='anchor" + n + "'></a>");
+    							if ($(this).prop('tagName') == "H1") //不可用"h1"
+    							{
+    								c=c+"<a href='#anchor"+n+"' class='anchor-h1'>"+$(this).text()+"</a><br/>";
+    							}
+    							else {
+    								c=c+"<a href='#anchor"+n+"' class='anchor-h2'>"+$(this).text()+"</a><br/>";
+    							}
+    							n = n + 1;
+    						});
+    						$("#catalog").html('<p>目录结构：</p>'+c);
+    					});
+    				</script>
+                
+            </div>
+        </div>
     </div>
     <div id="sideBar">
         <!-- 说明 -->
@@ -133,7 +198,6 @@
 
     </div>
 </div>
-
     <div class="clear"></div>
     <div id="footer">
         <span>©2015&nbsp;<a href="/about.html">SevenNight</a>&nbsp;&nbsp;版权所有</span>
