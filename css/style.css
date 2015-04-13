@@ -3,9 +3,8 @@
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    /*background-color: #e6e6e6;*/
-	/*background: #53a8bc url(../img/bg.jpg) repeat-x;*/
-	background: url(../img/bg.jpg);
+    background-color: #e6e6e6;
+	/*background: ##e6e6e6 url(../img/bg.jpg) repeat-x;*/
 }
 /*通用样式*/
 *{
