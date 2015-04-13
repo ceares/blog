@@ -7,30 +7,6 @@
 		<atom:link href="http://7ye.xyz/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>测试代码样式</title>
-				<description>&lt;p&gt;这个是弄着玩的&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    &lt;span class=&quot;cm&quot;&gt;/**&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;     * 设置标签&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;     * @author Administrator&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;     *&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;     */&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PlatSetTag&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TagSupport&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serialVersionUID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8940722154025495008L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-				<pubDate>Fri, 04 Sep 2015 11:07:23 +0800</pubDate>
-				<link>http://7ye.xyz/2015/09/04/testcode</link>
-				<guid isPermaLink="true">http://7ye.xyz/2015/09/04/testcode</guid>
-			</item>
-		
-			<item>
 				<title>win7下jekyll的安装</title>
 				<description>&lt;h1 id=&quot;简介&quot;&gt;简介&lt;/h1&gt;
 

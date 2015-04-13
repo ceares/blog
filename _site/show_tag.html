@@ -44,7 +44,7 @@
     <ul id="showListTag">
 		<script type="text/javascript">
 			$(function(){
-				var dataStr = '{ "'+(encodeURIComponent("资源")).replace(/%/g,"")+'":[{"url":"/2015/03/29/jekyll-stuep", "title":"win7下jekyll的安装", "date":"2015年03月29日"}],"'+(encodeURIComponent("jekyll")).replace(/%/g,"")+'":[{"url":"/2015/03/29/jekyll-stuep", "title":"win7下jekyll的安装", "date":"2015年03月29日"}],"'+(encodeURIComponent("github")).replace(/%/g,"")+'":[{"url":"/2015/03/29/jekyll-stuep", "title":"win7下jekyll的安装", "date":"2015年03月29日"}],"'+(encodeURIComponent("java")).replace(/%/g,"")+'":[{"url":"/2015/09/04/testcode", "title":"测试代码样式", "date":"2015年09月04日"}],"'+(encodeURIComponent("代码")).replace(/%/g,"")+'":[{"url":"/2015/09/04/testcode", "title":"测试代码样式", "date":"2015年09月04日"}],"'+(encodeURIComponent("样式")).replace(/%/g,"")+'":[{"url":"/2015/09/04/testcode", "title":"测试代码样式", "date":"2015年09月04日"}] }',
+				var dataStr = '{ "'+(encodeURIComponent("资源")).replace(/%/g,"")+'":[{"url":"/2015/03/29/jekyll-stuep", "title":"win7下jekyll的安装", "date":"2015年03月29日"}],"'+(encodeURIComponent("jekyll")).replace(/%/g,"")+'":[{"url":"/2015/03/29/jekyll-stuep", "title":"win7下jekyll的安装", "date":"2015年03月29日"}],"'+(encodeURIComponent("github")).replace(/%/g,"")+'":[{"url":"/2015/03/29/jekyll-stuep", "title":"win7下jekyll的安装", "date":"2015年03月29日"}] }',
 				data = JSON.parse(dataStr),
 				curTag = $.query.get("tag"),
 				archieves = data[curTag];
@@ -76,8 +76,6 @@
         <h3>最新文章</h3>
         <ul>
             
-              <li><a href="/2015/09/04/testcode">测试代码样式</a></li>
-            
               <li><a href="/2015/03/29/jekyll-stuep">win7下jekyll的安装</a></li>
             
         </ul>
@@ -95,12 +93,6 @@
                 <li><a class="tags" href="/show_tag.html?tag=jekyll">jekyll&nbsp;<span>1</span></a></li>
             
                 <li><a class="tags" href="/show_tag.html?tag=github">github&nbsp;<span>1</span></a></li>
-            
-                <li><a class="tags" href="/show_tag.html?tag=java">java&nbsp;<span>1</span></a></li>
-            
-                <li><a class="tags" href="/show_tag.html?tag=代码">代码&nbsp;<span>1</span></a></li>
-            
-                <li><a class="tags" href="/show_tag.html?tag=样式">样式&nbsp;<span>1</span></a></li>
             
             <script type="text/javascript">
                 $(function(){
