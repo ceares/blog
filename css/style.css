@@ -4,7 +4,8 @@
     line-height: 1.42857143;
     color: #333;
     /*background-color: #e6e6e6;*/
-	background: #53a8bc url(../img/bg.jpg) repeat-x;
+	/*background: #53a8bc url(../img/bg.jpg) repeat-x;*/
+	background: url(../img/bg.jpg);
 }
 /*通用样式*/
 *{
